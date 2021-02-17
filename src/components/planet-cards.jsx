@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContex";
 
 export function PlanetCard() {
-  const { store, action } = useContext(Context);
+  const { store, actions } = useContext(Context);
 
   return (
     <div className="mt-3">
@@ -33,7 +33,7 @@ export function PlanetCard() {
                   </button>
                 </Link>
                 <button type="button" className="btn btn-outline-warning">
-                  {<i className="fas fa-heart"></i>}
+                  {<i className="fas fa-heart" onClick={() => actions.addFavorite(planet.name)}></i>}
                 </button>
               </div>
             </div>
