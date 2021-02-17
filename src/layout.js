@@ -9,6 +9,7 @@ import { Navbar } from "./components/navbar.jsx";
 import { Home } from "./views/home.js";
 import { PeopleDetail } from "./views/peopleDescription.jsx";
 import { PlanetDetail } from "./views/planetDescription.jsx";
+import { Flooter } from "./components/flooter";
 
 
 //create your first component
@@ -26,20 +27,20 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home/>
 						</Route>
-						<Route exact path="/people">
+						<Route exact path="/people/:theid">
 							<PeopleDetail/>
 						</Route>
-                        <Route exact path="/planet">
+                        <Route exact path="/planet/:theid">
 							<PlanetDetail/>
 						</Route>
-						<Route exact path="/single/:theid">
+						<Route exact path="/single/">
 							
 						</Route>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
 					</Switch>
-					
+					<Flooter/>
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>

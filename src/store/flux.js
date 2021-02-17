@@ -38,6 +38,30 @@ const getState = ({ getStore, getActions, setStore }) => {
           })
           .catch((err) => console.error(err));
       },
+      addFavorite: (name) => {
+        const store = getStore();
+
+        let count = null;
+        store.favorites.map((item) => {
+          if (item.name == name) {
+            count = true;
+          }
+        });
+
+        if (!count) {
+          setStore({
+            favorites: [...store.favorites,{ name: name},
+            ],
+          });
+        }
+      },
+
+      deliteFavorite: (elem) => {
+        const store = getStore();
+
+        const deliteF = store.favorites.filter((item, i) => i != elem);
+        setStore({ favorites: deliteF });
+      },
     },
   };
 };

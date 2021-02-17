@@ -27,7 +27,7 @@ export function PlanetCard() {
                 {planet.terrain}
               </p>
               <div className="d-flex justify-content-between">
-                <Link to="/planet">
+                <Link to={"/planet/"+i}>
                   <button type="button" className="btn btn-outline-primary">
                     Learn More!
                   </button>

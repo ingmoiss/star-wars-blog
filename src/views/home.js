@@ -6,14 +6,14 @@ export function Home() {
   return (
     <div className="container">
 
-      <div className="align-items-center text-center mt5">
+      <div className="align-items-center text-center">
         <div style={{ overflow: "auto" }}>
           <div className="row">
             <PeopleCard />
           </div>
         </div>
       </div>
-      <div className="align-items-center text-center mt5">
+      <div className="align-items-center text-center mb-3">
         <div style={{ overflow: "auto" }}>
           <div className="row">
             <PlanetCard />

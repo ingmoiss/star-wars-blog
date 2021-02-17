@@ -30,12 +30,12 @@ export function PeopleCard() {
                     {people.eye_color}
                 </p>
                 <div className="d-flex justify-content-between">
-                  <Link to="/people">
+                  <Link to={"/people/"+i}>
                     <button type="button" className="btn btn-outline-primary">
                       Learn More!
                     </button>
                   </Link>
-                  <button type="button" className="btn btn-outline-warning">
+                  <button type="button" className="btn btn-outline-warning" onClick={() => actions.addFavorite(people.name)}>
                     {<i className="fas fa-heart"></i>}
                   </button>
                 </div>

@@ -1,11 +1,12 @@
 .fa-trash-alt:hover{
   cursor: pointer;
 }
-
 .separator{
   background-color: red;
 }
-
 .navbar{
+  background-color: black;
+}
+.footer{
   background-color: black;
 }
