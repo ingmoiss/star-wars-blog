@@ -5,7 +5,7 @@ import starWarsLogo from "../img/star-wars-logo.png";
 
 export function Navbar() {
   return (
-    <nav className="navbar navbar-dark bg-dark mb-3">
+    <nav className="navbar">
       <div className="container">
         <Link to="/">
           <span className="navbar-brand mb-0 h1">
