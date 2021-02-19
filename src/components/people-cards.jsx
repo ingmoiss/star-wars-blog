@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import peopleC from "../img/people.jpeg";
 import { Link } from "react-router-dom";
 
@@ -22,7 +22,7 @@ export function PeopleCard() {
                 <p className="card-text">
                     <strong>Gender: &nbsp;</strong> 
                     {people.gender}
-                    <br/>
+                    <br/>                                                                                
                     <strong>Hair Color: &nbsp;</strong>
                     {people.hair_color}
                     <br/>
