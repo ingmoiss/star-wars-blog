@@ -128,10 +128,10 @@ export function SignUp() {
             </div>
           </div>
           <div className="submit-row my-2 d-flex justify-content-end">
-            <button type="submit" class="btn btn-primary mr-1">
+            <button type="submit" className="btn btn-primary mr-1">
               Sign Up
             </button>
-            <button type="reset" class="btn btn-danger ml-1">
+            <button type="reset" className="btn btn-danger ml-1">
               Cancel
             </button>
           </div>

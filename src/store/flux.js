@@ -1,3 +1,5 @@
+import { data } from "jquery";
+
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
@@ -7,36 +9,32 @@ const getState = ({ getStore, getActions, setStore }) => {
     },
     actions: {
       loadPeoples: () => {
-        fetch("https://www.swapi.tech/api/people/")
-          .then((res) => res.json())
-          .then((data) => {
-            let people = getStore().peoples;
-            for (let i = 0; i < data.results.length; i++) {
-              fetch(data.results[i].url)
-                .then((res) => res.json())
-                .then((dataProp) => {
-                  people.push(dataProp.result.properties);
-                  setStore({ peoples: [...people] });
-                });
+        fetch("https://3000-silver-landfowl-psjk55on.ws-us03.gitpod.io/peoples")
+          .then(response => {
+            if(!response.ok){
+              throw Error(response.statusText)
             }
+            return response.json();
           })
-          .catch((err) => console.error(err));
+          .then(data => {
+            console.log(data)
+            setStore({peoples : data});
+          })
+          .catch(err => console.error(err));
       },
       loadPlanets: () => {
-        fetch("https://www.swapi.tech/api/planets/")
-          .then((res) => res.json())
-          .then((data) => {
-            let planet = getStore().planets;
-            for (let i = 0; i < data.results.length; i++) {
-              fetch(data.results[i].url)
-                .then((res) => res.json())
-                .then((dataProp) => {
-                  planet.push(dataProp.result.properties);
-                  setStore({ planets: [...planet] });
-                });
-            }
-          })
-          .catch((err) => console.error(err));
+        fetch("https://3000-silver-landfowl-psjk55on.ws-us03.gitpod.io/planets")
+        .then(response => {
+          if(!response.ok){
+            throw Error(response.statusText)
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log(data)
+          setStore({planets : data});
+        })
+        .catch(err => console.error(err));
       },
       addFavorite: (name) => {
         const store = getStore();
