@@ -10,6 +10,8 @@ import { Home } from "./views/home.js";
 import { PeopleDetail } from "./views/peopleDescription.jsx";
 import { PlanetDetail } from "./views/planetDescription.jsx";
 import { Flooter } from "./components/flooter";
+import { SingUp } from "./views/sing_up.jsx"
+import { LogIn } from "./views/log_in.jsx";
 
 
 //create your first component
@@ -33,8 +35,11 @@ const Layout = () => {
                         <Route exact path="/planet/:theid">
 							<PlanetDetail/>
 						</Route>
-						<Route exact path="/single/">
-							
+						<Route exact path="/sing_up/">
+							<SingUp/>
+						</Route>
+						<Route exact path="/log_in/">
+							<LogIn/>
 						</Route>
 						<Route>
 							<h1>Not found!</h1>

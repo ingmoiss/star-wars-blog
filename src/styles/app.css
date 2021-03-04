@@ -1,6 +1,12 @@
 .fa-trash-alt:hover{
   cursor: pointer;
 }
+.alto{
+  height: calc(100vh - 57px - 56px);
+}
+.font{
+  font-size: 25px;
+}
 .separator{
   background-color: red;
 }
@@ -10,3 +16,4 @@
 .footer{
   background-color: black;
 }
+
