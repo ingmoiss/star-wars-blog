@@ -32,9 +32,12 @@ export function LogIn() {
               />
             </div>
           </div>
-          <div className="submit-row my-2">
-            <button type="submit" class="btn btn-primary btn-block mb-2">
+          <div className="submit-row my-2 d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary mr-1">
               Log In
+            </button>
+            <button type="reset" class="btn btn-danger ml-1">
+              Cancel
             </button>
           </div>
         </form>
@@ -42,7 +45,7 @@ export function LogIn() {
       <div className="row mt-3">
         <div className="col-md">
           <p className="text-center">
-          Don't have an account? <Link to="/sing_up/">Sign up</Link>
+            Don't have an account? <Link to="/sign_up/">Sign up</Link>
           </p>
         </div>
       </div>
